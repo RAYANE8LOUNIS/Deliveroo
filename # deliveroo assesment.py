@@ -26,3 +26,6 @@ def savee_orderss():
             json.dump(orders, file, indent=4)
     except IOError:
         messagebox.showerror("Error", "Failed to save orders.")
+        
+ # give a name to the orders list
+orders = TAke_orders()        
