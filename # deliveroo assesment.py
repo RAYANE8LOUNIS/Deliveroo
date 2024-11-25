@@ -29,3 +29,10 @@ def savee_orderss():
         
  # give a name to the orders list
 orders = TAke_orders()        
+
+# parameters to choose and configure the style of my app backround 
+STYLE = {
+    "bg": "#1e3a5f",
+    "fg": "white",
+    "font": ("Arial", 12)
+}
