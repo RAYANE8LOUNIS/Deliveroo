@@ -15,4 +15,6 @@ def TAke_orders():
                 json.dump([], file)  #this should create an empty list if file doesn't exist for more efficasity 
         with open(ORDERS_FILE, 'r') as file:
             return json.load(file)
-   
+    except (json.JSONDecodeError, IOError):
+        messagebox.showerror("Error", f"Failed to load or initialize {ORDERS_FILE}.")
+        return []
