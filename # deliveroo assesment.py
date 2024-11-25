@@ -18,3 +18,11 @@ def TAke_orders():
     except (json.JSONDecodeError, IOError):
         messagebox.showerror("Error", f"Failed to load or initialize {ORDERS_FILE}.")
         return []
+    
+# create a function to save orders to the file
+def savee_orderss():
+    try:
+        with open(ORDERS_FILE, 'w') as file:
+            json.dump(orders, file, indent=4)
+    except IOError:
+        messagebox.showerror("Error", "Failed to save orders.")
