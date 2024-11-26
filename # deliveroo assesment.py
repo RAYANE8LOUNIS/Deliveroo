@@ -64,3 +64,14 @@ def calculate_price(region, is_fast, is_international):
     if is_international:
         price += 50
     return price
+
+ # a function to add an order to the list 
+def add_order():
+    name = name_entry.get().strip()
+    address = address_entry.get().strip()
+    item = item_entry.get().strip()
+    delivery_person = delivery_person_combobox.get().strip()
+    delivery_method = delivery_method_combobox.get().strip()
+    region = region_combobox.get().strip()
+    is_fast = fast_delivery_var.get()
+    is_international = international_delivery_var.get()
