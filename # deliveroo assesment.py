@@ -81,3 +81,13 @@ def add_order():
         return
 
     final_price = calculate_price(region, is_fast, is_international)
+
+# I have create a function to show and view orders on the app 
+def view_orders():
+    # all the orders will be sorted and displayed because i had creat before a bubble sort for this perpus 
+    bubble_sort_orders()
+
+    orders_text.delete(1.0, tk.END)
+    if not orders:
+        orders_text.insert(tk.END, "No orders available.\n")
+   
