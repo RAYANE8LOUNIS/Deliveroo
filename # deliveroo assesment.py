@@ -38,7 +38,7 @@ STYLE = {
 }
 
 # create a window wich will be display on the screen
-def center_window(window, width=600, height=400):
+def centerr_windoww(window, width=600, height=400):
     screen_width = window.winfo_screenwidth()
     screen_height = window.winfo_screenheight()
     x = (screen_width - width) // 2
@@ -52,4 +52,15 @@ def bubble_sort_orders():
     for i in range(n):
         for j in range(0, n - i - 1):
             if orders[j]['price'] < orders[j + 1]['price']:
-                orders[j], orders[j + 1] = orders[j + 1], orders[j]    
+                orders[j], orders[j + 1] = orders[j + 1], orders[j] 
+
+# Calculate price if it is national or international or if it is in england the price will be dubble 
+def calculate_price(region, is_fast, is_international):
+    base_price = 25
+    region_prices = {"England": 2, "Scotland": 1.5, "Wales": 1.15, "Northern Ireland": 1} # high taxes in england 
+    price = base_price * region_prices.get(region, 1)
+    if is_fast:
+        price *= 2 
+    if is_international:
+        price += 50
+    return price
