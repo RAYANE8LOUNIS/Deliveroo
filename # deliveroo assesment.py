@@ -132,3 +132,9 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
             if len(card_number) != 16 or not card_number.isdigit():
                 messagebox.showerror("Error", "Card number must be 16 digits!")
                 return
+            
+            # validate card details expiration date should be (MM/YY format)
+            try:
+                expiry_month, expiry_year = map(int, card_expiry.split('/'))
+                current_year = datetime.now().year % 100  # Last two digits of current year
+                current_month = datetime.now().month
