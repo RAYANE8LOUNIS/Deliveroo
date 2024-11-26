@@ -45,3 +45,11 @@ def center_window(window, width=600, height=400):
     y = (screen_height - height) // 2
     window.geometry(f"{width}x{height}+{x}+{y}")
     
+
+# Bubble sort to sort orders by price as required always when we press the view order button the result will be sorted 
+def bubble_sort_orders():
+    n = len(orders)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if orders[j]['price'] < orders[j + 1]['price']:
+                orders[j], orders[j + 1] = orders[j + 1], orders[j]    
