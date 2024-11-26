@@ -90,4 +90,12 @@ def view_orders():
     orders_text.delete(1.0, tk.END)
     if not orders:
         orders_text.insert(tk.END, "No orders available.\n")
+    else:
+        for i, order in enumerate(orders):
+            status = "Delivered" if order.get("delivered", False) else "Pending"
+            orders_text.insert(
+                tk.END,
+                f"{i + 1}. {order['name']} - {order['address']} - {order['item']} - "
+                f"{status} - Price: £{order['price']:.2f}\n"
+            )        
    
