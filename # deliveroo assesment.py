@@ -75,3 +75,9 @@ def add_order():
     region = region_combobox.get().strip()
     is_fast = fast_delivery_var.get()
     is_international = international_delivery_var.get()
+
+    if not (name and address and item and delivery_person and delivery_method and region):
+        messagebox.showerror("Error", "All fields are required! Please renter and put all information for batter service ")
+        return
+
+    final_price = calculate_price(region, is_fast, is_international)
