@@ -122,3 +122,9 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
         card_number = card_number_entry.get().strip()
         card_expiry = card_expiry_entry.get().strip()
         card_cvc = card_cvc_entry.get().strip()   
+    
+        if not payment_method: # error handaling of payment methode 
+            messagebox.showerror("Error", "Please select a payment method!")
+            return
+    
+        
