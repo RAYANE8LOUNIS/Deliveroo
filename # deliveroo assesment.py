@@ -36,3 +36,9 @@ STYLE = {
     "fg": "white",
     "font": ("Arial", 12)
 }
+
+# create a window wich will be display on the screen
+def center_window(window, width=600, height=400):
+    screen_width = window.winfo_screenwidth()
+    screen_height = window.winfo_screenheight()
+    
