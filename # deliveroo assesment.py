@@ -127,4 +127,8 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
             messagebox.showerror("Error", "Please select a payment method!")
             return
     
-        
+        if payment_method in ["Credit Card", "Debit Card"]:
+            # must be a validate card number to validate the payment 
+            if len(card_number) != 16 or not card_number.isdigit():
+                messagebox.showerror("Error", "Card number must be 16 digits!")
+                return
