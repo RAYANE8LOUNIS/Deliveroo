@@ -82,7 +82,11 @@ def add_order():
 
     final_price = calculate_price(region, is_fast, is_international)
 
+  # option to open the payment window to valididat the order 
+    open_payment_window(final_price, name, address, item, delivery_person, delivery_method, region, is_fast, is_international)
+
 # I have create a function to show and view orders on the app 
+
 def view_orders():
     # all the orders will be sorted and displayed because i had creat before a bubble sort for this perpus 
     bubble_sort_orders()
