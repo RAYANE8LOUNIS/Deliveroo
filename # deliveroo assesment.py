@@ -98,4 +98,13 @@ def view_orders():
                 f"{i + 1}. {order['name']} - {order['address']} - {order['item']} - "
                 f"{status} - Price: £{order['price']:.2f}\n"
             )        
-   
+   # function to clear input to restrat another order 
+def clear_inputs():
+    name_entry.delete(0, tk.END)
+    address_entry.delete(0, tk.END)
+    item_entry.delete(0, tk.END)
+    delivery_person_combobox.set("")
+    delivery_method_combobox.set("")
+    region_combobox.set("")
+    fast_delivery_var.set(False)
+    international_delivery_var.set(False)
