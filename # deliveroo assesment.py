@@ -112,3 +112,13 @@ def clear_inputs():
     region_combobox.set("")
     fast_delivery_var.set(False)
     international_delivery_var.set(False)
+
+ # this is to creat the payment window function
+def open_payment_window(price, name, address, item, delivery_person, delivery_method, region, is_fast, is_international):
+    """Open a payment window where the user confirms the payment."""
+    def confirm_payment(): # function to confirm the payment 
+        """Handle the payment confirmation and add the order."""
+        payment_method = payment_method_combobox.get().strip()
+        card_number = card_number_entry.get().strip()
+        card_expiry = card_expiry_entry.get().strip()
+        card_cvc = card_cvc_entry.get().strip()   
