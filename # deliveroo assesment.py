@@ -260,3 +260,8 @@ def open_rider_application_window(): #main name of the function
     tk.Label(rider_window, text="Name:", **STYLE).pack(pady=5)
     rider_name_entry = tk.Entry(rider_window, width=50)
     rider_name_entry.pack()
+
+# this is to create a place for the rider adress 
+    tk.Label(rider_window, text="Address:", **STYLE).pack(pady=5)
+    rider_address_entry = tk.Entry(rider_window, width=50)
+    rider_address_entry.pack()
