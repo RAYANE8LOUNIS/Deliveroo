@@ -326,3 +326,9 @@ item_entry.pack()
 tk.Label(root, text="Delivery Person:", **STYLE).pack(pady=5)
 delivery_person_combobox = ttk.Combobox(root, values=["Borhan Sami", "Taha Rebbani" , "Hussain Ayoub" , "Mursel delivery"], width=47)
 delivery_person_combobox.pack()
+
+
+#place the Delivery Method inside the window of main application
+tk.Label(root, text="Delivery Method:", **STYLE).pack(pady=5)
+delivery_method_combobox = ttk.Combobox(root, values=["Bike", "Car"], width=47)
+delivery_method_combobox.pack()
