@@ -225,7 +225,13 @@ def open_rider_application_window(): #main name of the function
             messagebox.showerror("Error", "All fields are required!")
             return
         
-        # see and check the valide of  bank details
+        # see and check the valide of bank details
         if len(bank_details) != 8 or not bank_details.isdigit():
-            messagebox.showerror("Error", "Bank account number must be 8 digits!")
+            messagebox.showerror("Error", "Bank account number must be 8 digits! please enter 8 digits!")
             return
+        
+        # see and check the valide of sort code
+        if len(sort_code) != 6 or not sort_code.isdigit():
+            messagebox.showerror("Error", "Sort code must be 6 digits! please enter 6 digits!")
+            return
+
