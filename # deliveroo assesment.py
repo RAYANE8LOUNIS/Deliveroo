@@ -81,7 +81,7 @@ def add_order():
     final_price = calculate_price(region, is_fast, )
 
   # option to open the payment window to valididat the order 
-    open_payment_window(final_price, name, address, item, delivery_person, delivery_method, region, is_fast, is_international)
+    open_payment_window(final_price, name, address, item, delivery_person, delivery_method, region, is_fast, )
 
 # I have create a function to show and view orders on the app 
 
@@ -109,7 +109,7 @@ def clear_inputs():
     delivery_method_combobox.set("")
     region_combobox.set("")
     fast_delivery_var.set(False)
-    international_delivery_var.set(False)
+    
 
  # this is to creat the payment window function
 def open_payment_window(price, name, address, item, delivery_person, delivery_method, region, is_fast, is_international):
@@ -341,5 +341,8 @@ fast_delivery_var = tk.BooleanVar()
 tk.Checkbutton(root, text="Fast Delivery", variable=fast_delivery_var, bg=STYLE["bg"], fg=STYLE["fg"]).pack()
 
 # put the view order and add order button inside the main window application
-tk.Button(root, text="Add Order", command=add_order, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=10)
-tk.Button(root, text="View Orders", command=view_orders, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=10)
+tk.Button(root, text="Add Order", command=add_order, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=10) # add order button 
+tk.Button(root, text="View Orders", command=view_orders, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=10) # view order button 
+
+# Add the Rider Application button to the main window application
+tk.Button(root, text="Apply to be a rider ", command=open_rider_application_window, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=10)
