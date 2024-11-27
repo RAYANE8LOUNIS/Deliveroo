@@ -155,3 +155,22 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
             if card_number or card_expiry or card_cvc:
                 messagebox.showerror("Error", "Card details are not required for PayPal! please leave it emty")
                 return 
+
+        # After payment is confirmed,than we can add the order to the list 
+        orders.append({
+            'name': name,
+            'address': address,
+            'item': item,
+            'delivered': False,
+            'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            'delivery_person': delivery_person,
+            'delivery_method': delivery_method,
+            'region': region,
+            'fast_delivery': is_fast,
+            'international': is_international,
+            'price': price
+        })
+        save_orders()
+        messagebox.showinfo("Success", f"Order added successfully! Final Price: £{price:.2f}")
+        payment_window.destroy()
+        clear_inputs()  # this will clear all the inputs after successful addition  it means that after when we will finish every thing it will be emty 
