@@ -265,3 +265,9 @@ def open_rider_application_window(): #main name of the function
     tk.Label(rider_window, text="Address:", **STYLE).pack(pady=5)
     rider_address_entry = tk.Entry(rider_window, width=50)
     rider_address_entry.pack()
+
+
+# this is to create a place for the rider bank account number 
+    tk.Label(rider_window, text="Bank Account Number:", **STYLE).pack(pady=5)
+    bank_details_entry = tk.Entry(rider_window, width=50)
+    bank_details_entry.pack()
