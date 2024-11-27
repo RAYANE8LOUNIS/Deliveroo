@@ -254,3 +254,9 @@ def open_rider_application_window(): #main name of the function
     rider_window.title("Rider Application (thank u for chossing Deliveroo)")
     rider_window.config(bg=STYLE["bg"])
     center_window(rider_window, 700, 600)
+
+    # Input fields
+    # this is to create a place for name for the rider 
+    tk.Label(rider_window, text="Name:", **STYLE).pack(pady=5)
+    rider_name_entry = tk.Entry(rider_window, width=50)
+    rider_name_entry.pack()
