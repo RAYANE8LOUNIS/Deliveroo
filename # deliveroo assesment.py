@@ -193,7 +193,17 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
     tk.Label(payment_window, text="Card Number (16 digits):", **STYLE).pack(pady=5)
     card_number_entry = tk.Entry(payment_window, width=40)
     card_number_entry.pack()
-    
+
+    #inser an expiry date 
     tk.Label(payment_window, text="Card Expiry (MM/YY):", **STYLE).pack(pady=5)
     card_expiry_entry = tk.Entry(payment_window, width=40)
     card_expiry_entry.pack()
+
+    # inser the ccv code of cards and show it on the window
+    tk.Label(payment_window, text="Card CVC (3 or 4 digits):", **STYLE).pack(pady=5)
+    card_cvc_entry = tk.Entry(payment_window, width=40)
+    card_cvc_entry.pack()
+
+# the button of payment confirmation
+    tk.Button(payment_window, text="Confirm Payment", command=confirm_payment, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=20)
+    
