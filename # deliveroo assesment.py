@@ -180,3 +180,6 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
     payment_window.title("Payment Confirmation")
     payment_window.config(bg=STYLE["bg"])
     center_window(payment_window, 600, 400)    
+
+     # show and display the final price 
+    tk.Label(payment_window, text=f"Total Amount: £{price:.2f}", **STYLE).pack(pady=10)
