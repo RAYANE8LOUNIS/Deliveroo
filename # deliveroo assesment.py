@@ -144,8 +144,14 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
             except ValueError:
                 messagebox.showerror("Error", "Invalid expiration date format! Use MM/YY.")
                 return
+            
              # and also chek validate CVV for the card 
             if len(card_cvc) not in [3, 4] or not card_cvc.isdigit():
                 messagebox.showerror("Error", "CVV must be 3 or 4 digits!")
                 return
-
+              #for the payple methode we don't need any information
+        elif payment_method == "PayPal":
+            # PayPal is always valide (no card details needed)
+            if card_number or card_expiry or card_cvc:
+                messagebox.showerror("Error", "Card details are not required for PayPal! please leave it emty")
+                return 
