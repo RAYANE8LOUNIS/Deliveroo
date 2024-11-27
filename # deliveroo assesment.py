@@ -249,4 +249,8 @@ def open_rider_application_window(): #main name of the function
         messagebox.showinfo("Success", "Rider application submitted successfully! thank u for choosing Deliveroo! safe Ride ")
         rider_window.destroy() # destroy the rider application window to see the main window to make more orders 
 
-   
+    #this is to create a new window for rider application
+    rider_window = tk.Toplevel(root)
+    rider_window.title("Rider Application (thank u for chossing Deliveroo)")
+    rider_window.config(bg=STYLE["bg"])
+    center_window(rider_window, 700, 600)
