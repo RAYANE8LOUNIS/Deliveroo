@@ -112,7 +112,7 @@ def clear_inputs():
     
 
  # this is to creat the payment window function
-def open_payment_window(price, name, address, item, delivery_person, delivery_method, region, is_fast, is_international):
+def open_payment_window(price, name, address, item, delivery_person, delivery_method, region, is_fast, ):
     """Open a payment window where the user confirms the payment."""
     def confirm_payment(): # function to confirm the payment 
         """Handle the payment confirmation and add the order."""
@@ -165,7 +165,6 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
             'delivery_method': delivery_method,
             'region': region,
             'fast_delivery': is_fast,
-            'international': is_international,
             'price': price
         })
         save_orders()
@@ -209,7 +208,7 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
 def open_rider_application_window(): #main name of the function 
     """Open the Rider Application window to add more rider (toghether we can )."""
     def submit_rider_application():
-        """Handle rider application submission (submit your application now )."""
+        """Handle rider application submission (submit your application now and start rideing tommorow )."""
         rider_name = rider_name_entry.get().strip()
         rider_address = rider_address_entry.get().strip()
         bank_details = bank_details_entry.get().strip()
@@ -284,7 +283,7 @@ def open_rider_application_window(): #main name of the function
 
 #  this is to create a place for the rider right to work on the uk
     tk.Label(rider_window, text="Right to Work in the UK:", **STYLE).pack(pady=5)
-    right_to_work_combobox = ttk.Combobox(rider_window, values=["British Passport", "Valid Share Code (UKVI)", "Irish Passport"], width=47)
+    right_to_work_combobox = ttk.Combobox(rider_window, values=["British Passport", "Valid Share Code (UKVI)", "Irish Passport" ,"Settelment"], width=47)
     right_to_work_combobox.pack()
 
 #  this is to create a place for our termes and condition 
@@ -333,7 +332,7 @@ delivery_method_combobox.pack()
 
 #place the Region inside the window of main application
 tk.Label(root, text="Region:", **STYLE).pack(pady=5)
-region_combobox = ttk.Combobox(root, values=["England", "Scotland" , "wales" , "Northen Irland"], width=47)
+region_combobox = ttk.Combobox(root, values=["England", "Scotland" , "wales" , "Northen Irland" ,"USA" , "Europeen Union" , "Africa"], width=47)
 region_combobox.pack()
 
 #place the option of fast delivery inside the window of main application
