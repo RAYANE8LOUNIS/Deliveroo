@@ -206,4 +206,17 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
 
 # the button of payment confirmation
     tk.Button(payment_window, text="Confirm Payment", command=confirm_payment, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=20)
+
+    # this is the function to create rider application window
+def open_rider_application_window(): #main name of the function 
+    """Open the Rider Application window to add more rider (toghether we can )."""
+    def submit_rider_application():
+        """Handle rider application submission (submit your application now )."""
+        rider_name = rider_name_entry.get().strip()
+        rider_address = rider_address_entry.get().strip()
+        bank_details = bank_details_entry.get().strip()
+        sort_code = sort_code_entry.get().strip()
+        experience = experience_combobox.get().strip()
+        terms_agreement = terms_agree_var.get()
+        right_to_work = right_to_work_combobox.get().strip()
     
