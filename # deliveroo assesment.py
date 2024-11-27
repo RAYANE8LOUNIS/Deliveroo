@@ -174,3 +174,9 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
         messagebox.showinfo("Success", f"Order added successfully! Final Price: £{price:.2f}")
         payment_window.destroy()
         clear_inputs()  # this will clear all the inputs after successful addition  it means that after when we will finish every thing it will be emty 
+
+    # this is to Create a payment window
+    payment_window = tk.Toplevel(root)
+    payment_window.title("Payment Confirmation")
+    payment_window.config(bg=STYLE["bg"])
+    center_window(payment_window, 600, 400)    
