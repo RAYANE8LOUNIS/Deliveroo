@@ -219,4 +219,13 @@ def open_rider_application_window(): #main name of the function
         experience = experience_combobox.get().strip()
         terms_agreement = terms_agree_var.get()
         right_to_work = right_to_work_combobox.get().strip()
-    
+
+    # Validate fields and ckech if evry thing is good 
+        if not (rider_name and rider_address and bank_details and sort_code and experience and right_to_work):
+            messagebox.showerror("Error", "All fields are required!")
+            return
+        
+        # see and check the valide of  bank details
+        if len(bank_details) != 8 or not bank_details.isdigit():
+            messagebox.showerror("Error", "Bank account number must be 8 digits!")
+            return
