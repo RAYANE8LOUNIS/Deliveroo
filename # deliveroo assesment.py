@@ -276,3 +276,9 @@ def open_rider_application_window(): #main name of the function
     tk.Label(rider_window, text="Sort Code:", **STYLE).pack(pady=5)
     sort_code_entry = tk.Entry(rider_window, width=50)
     sort_code_entry.pack()
+
+    
+#  this is to create a place for the rider experience uber just east 
+    tk.Label(rider_window, text="Experience (Uber/JustEat/pizza hut delivery ):", **STYLE).pack(pady=5)
+    experience_combobox = ttk.Combobox(rider_window, values=["Yes", "No"], width=47)
+    experience_combobox.pack()
