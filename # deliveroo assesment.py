@@ -234,4 +234,7 @@ def open_rider_application_window(): #main name of the function
         if len(sort_code) != 6 or not sort_code.isdigit():
             messagebox.showerror("Error", "Sort code must be 6 digits! please enter 6 digits!")
             return
-
+ # Check terms agreement you should agree with our terms and agreements 
+        if not terms_agreement:
+            messagebox.showerror("Error", "You must agree to the terms and conditions!")
+            return
