@@ -312,4 +312,7 @@ tk.Label(root, text="Customer Name:", **STYLE).pack(pady=5)
 name_entry = tk.Entry(root, width=50)
 name_entry.pack()
 
-
+#place the delivery Address inside the window of main application 
+tk.Label(root, text="Delivery Address:", **STYLE).pack(pady=5)
+address_entry = tk.Entry(root, width=50)
+address_entry.pack()
