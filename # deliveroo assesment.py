@@ -288,3 +288,7 @@ def open_rider_application_window(): #main name of the function
     tk.Label(rider_window, text="Right to Work in the UK:", **STYLE).pack(pady=5)
     right_to_work_combobox = ttk.Combobox(rider_window, values=["British Passport", "Valid Share Code (UKVI)", "Irish Passport"], width=47)
     right_to_work_combobox.pack()
+
+#  this is to create a place for our termes and condition 
+    terms_agree_var = tk.BooleanVar()
+    tk.Checkbutton(rider_window, text="I agree to the Terms and Conditions", variable=terms_agree_var, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=5)
