@@ -171,9 +171,9 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
             'price': price
         })
         save_orders()
-        messagebox.showinfo("Success", f"Order added successfully! Final Price: £{price:.2f}")
+        messagebox.showinfo("Success", f"Order added successfully! Final Price: £{price:.2f} thank you for ordering with Deliveroo")
         payment_window.destroy()
-        clear_inputs()  # this will clear all the inputs after successful addition  it means that after when we will finish every thing it will be emty 
+        clear_inputs()  # this will clear all the inputs after successful addition it means that after when we will finish every thing it will be emty 
 
     # this is to Create a payment window
     payment_window = tk.Toplevel(root)
@@ -251,7 +251,7 @@ def open_rider_application_window(): #main name of the function
 
     #this is to create a new window for rider application
     rider_window = tk.Toplevel(root)
-    rider_window.title("Rider Application (thank u for chossing Deliveroo)")
+    rider_window.title("Rider Application (thank you for chossing Deliveroo)")
     rider_window.config(bg=STYLE["bg"])
     center_window(rider_window, 700, 600)
 
@@ -300,7 +300,7 @@ def open_rider_application_window(): #main name of the function
 
     # on this step i created a window for the main deliveroo application 
 root = tk.Tk()
-root.title("Delivery Application")
+root.title("Deliveroo (Together we can make changes)")
 root.config(bg=STYLE["bg"])
 center_window(root, 800, 600)
 
@@ -321,3 +321,8 @@ address_entry.pack()
 tk.Label(root, text="Item to Deliver:", **STYLE).pack(pady=5)
 item_entry = tk.Entry(root, width=50)
 item_entry.pack()
+
+#place the delivery person inside the window of main application
+tk.Label(root, text="Delivery Person:", **STYLE).pack(pady=5)
+delivery_person_combobox = ttk.Combobox(root, values=["Borhan Sami", "Taha Rebbani" , "Hussain Ayoub" , "Mursel delivery"], width=47)
+delivery_person_combobox.pack()
