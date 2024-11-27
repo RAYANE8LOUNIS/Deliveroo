@@ -182,4 +182,9 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
     center_window(payment_window, 600, 400)    
 
      # show and display the final price 
-    tk.Label(payment_window, text=f"Total Amount: £{price:.2f}", **STYLE).pack(pady=10)
+    tk.Label(payment_window, text=f"Total Amount: £{price:.2f}", **STYLE).pack(pady=10) 
+
+    # show the Payment method
+    tk.Label(payment_window, text="Payment Method:", **STYLE).pack(pady=5)
+    payment_method_combobox = ttk.Combobox(payment_window, values=["Credit Card", "Debit Card", "PayPal"], width=47)
+    payment_method_combobox.pack()
