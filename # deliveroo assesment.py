@@ -282,3 +282,9 @@ def open_rider_application_window(): #main name of the function
     tk.Label(rider_window, text="Experience (Uber/JustEat/pizza hut delivery ):", **STYLE).pack(pady=5)
     experience_combobox = ttk.Combobox(rider_window, values=["Yes", "No"], width=47)
     experience_combobox.pack()
+
+
+#  this is to create a place for the rider right to work on the uk
+    tk.Label(rider_window, text="Right to Work in the UK:", **STYLE).pack(pady=5)
+    right_to_work_combobox = ttk.Combobox(rider_window, values=["British Passport", "Valid Share Code (UKVI)", "Irish Passport"], width=47)
+    right_to_work_combobox.pack()
