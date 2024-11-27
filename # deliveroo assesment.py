@@ -7,7 +7,7 @@ import os
 # File to store orders
 ORDERS_FILE = "rayane.order"
 
-def TAke_orders():
+def Take_orders():
     """Load orders from a file, and creating it if it doesn't exist for more help."""
     try:
         if not os.path.exists(ORDERS_FILE):
@@ -20,7 +20,7 @@ def TAke_orders():
         return []
     
 # create a function to save orders to the file
-def savee_orderss():
+def save_orders():
     try:
         with open(ORDERS_FILE, 'w') as file:
             json.dump(orders, file, indent=4)
@@ -38,7 +38,7 @@ STYLE = {
 }
 
 # create a window wich will be display on the screen
-def centerr_windoww(window, width=600, height=400):
+def center_window(window, width=600, height=400):
     screen_width = window.winfo_screenwidth()
     screen_height = window.winfo_screenheight()
     x = (screen_width - width) // 2
@@ -298,4 +298,10 @@ def open_rider_application_window(): #main name of the function
 
 
 
-    
+    # on this step i created a window for the main deliveroo application 
+root = tk.Tk()
+root.title("Delivery Application")
+root.config(bg=STYLE["bg"])
+center_window(root, 800, 600)
+
+
