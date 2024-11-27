@@ -316,3 +316,8 @@ name_entry.pack()
 tk.Label(root, text="Delivery Address:", **STYLE).pack(pady=5)
 address_entry = tk.Entry(root, width=50)
 address_entry.pack()
+
+#place the items to deliver inside the window of main application 
+tk.Label(root, text="Item to Deliver:", **STYLE).pack(pady=5)
+item_entry = tk.Entry(root, width=50)
+item_entry.pack()
