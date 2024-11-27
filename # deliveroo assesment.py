@@ -138,3 +138,14 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
                 expiry_month, expiry_year = map(int, card_expiry.split('/'))
                 current_year = datetime.now().year % 100  # Last two digits of current year
                 current_month = datetime.now().month
+                if expiry_month < 1 or expiry_month > 12 or expiry_year < current_year or (expiry_year == current_year and expiry_month < current_month):
+                    messagebox.showerror("Error", "Card expiration date is invalid!")
+                    return
+            except ValueError:
+                messagebox.showerror("Error", "Invalid expiration date format! Use MM/YY.")
+                return
+             # and also chek validate CVV for the card 
+            if len(card_cvc) not in [3, 4] or not card_cvc.isdigit():
+                messagebox.showerror("Error", "CVV must be 3 or 4 digits!")
+                return
+
