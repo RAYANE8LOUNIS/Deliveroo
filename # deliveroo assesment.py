@@ -335,3 +335,7 @@ delivery_method_combobox.pack()
 tk.Label(root, text="Region:", **STYLE).pack(pady=5)
 region_combobox = ttk.Combobox(root, values=["England", "Scotland" , "wales" , "Northen Irland"], width=47)
 region_combobox.pack()
+
+#place the option of fast delivery inside the window of main application
+fast_delivery_var = tk.BooleanVar()
+tk.Checkbutton(root, text="Fast Delivery", variable=fast_delivery_var, bg=STYLE["bg"], fg=STYLE["fg"]).pack()
