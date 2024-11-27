@@ -55,14 +55,12 @@ def bubble_sort_orders():
                 orders[j], orders[j + 1] = orders[j + 1], orders[j] 
 
 # Calculate price if it is national or international or if it is in england the price will be dubble 
-def calculate_price(region, is_fast, is_international):
+def calculate_price(region, is_fast, ):
     base_price = 25
-    region_prices = {"England": 2, "Scotland": 1.5, "Wales": 1.15, "Northern Ireland": 1} # high taxes in england 
+    region_prices = {"England": 2, "Scotland": 1.5, "Wales": 1.15, "Northern Ireland": 1, "USA": 5, "Europeen Union":4, "Africa":7} # high taxes in england and usa and EU and africa beaucuse it's international delivery
     price = base_price * region_prices.get(region, 1)
     if is_fast:
         price *= 2 
-    if is_international:
-        price += 50
     return price
 
  # a function to add an order to the list 
@@ -74,13 +72,13 @@ def add_order():
     delivery_method = delivery_method_combobox.get().strip()
     region = region_combobox.get().strip()
     is_fast = fast_delivery_var.get()
-    is_international = international_delivery_var.get()
+    
 
     if not (name and address and item and delivery_person and delivery_method and region):
         messagebox.showerror("Error", "All fields are required! Please renter and put all information for batter service ")
         return
 
-    final_price = calculate_price(region, is_fast, is_international)
+    final_price = calculate_price(region, is_fast, )
 
   # option to open the payment window to valididat the order 
     open_payment_window(final_price, name, address, item, delivery_person, delivery_method, region, is_fast, is_international)
@@ -330,5 +328,10 @@ delivery_person_combobox.pack()
 
 #place the Delivery Method inside the window of main application
 tk.Label(root, text="Delivery Method:", **STYLE).pack(pady=5)
-delivery_method_combobox = ttk.Combobox(root, values=["Bike", "Car"], width=47)
+delivery_method_combobox = ttk.Combobox(root, values=["Bike", "Car", "Boat", "Plane(british airways)"], width=47)
 delivery_method_combobox.pack()
+
+#place the Region inside the window of main application
+tk.Label(root, text="Region:", **STYLE).pack(pady=5)
+region_combobox = ttk.Combobox(root, values=["England", "Scotland" , "wales" , "Northen Irland"], width=47)
+region_combobox.pack()
