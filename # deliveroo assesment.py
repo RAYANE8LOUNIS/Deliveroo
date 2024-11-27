@@ -346,3 +346,8 @@ tk.Button(root, text="View Orders", command=view_orders, bg=STYLE["bg"], fg=STYL
 
 # Add the Rider Application button to the main window application
 tk.Button(root, text="Apply to be a rider ", command=open_rider_application_window, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=10)
+
+orders_text = tk.Text(root, width=70, height=15, wrap=tk.WORD)
+orders_text.pack()
+
+root.mainloop()
