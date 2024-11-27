@@ -28,7 +28,7 @@ def save_orders():
         messagebox.showerror("Error", "Failed to save orders.")
         
  # give a name to the orders list
-orders = TAke_orders()        
+orders = Take_orders()        
 
 # parameters to choose and configure the style of my app backround 
 STYLE = {
