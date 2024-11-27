@@ -244,3 +244,9 @@ def open_rider_application_window(): #main name of the function
         if right_to_work not in ["British Passport", "Valid Share Code (UKVI)", "Irish Passport" , "Settelment"]:
             messagebox.showerror("Error", "You must select a valid right to work option!")
             return
+        
+        # the final message which will be display on the window if every thing is done 
+        messagebox.showinfo("Success", "Rider application submitted successfully! thank u for choosing Deliveroo! safe Ride ")
+        rider_window.destroy() # destroy the rider application window to see the main window to make more orders 
+
+   
