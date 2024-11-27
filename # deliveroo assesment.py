@@ -193,3 +193,7 @@ def open_payment_window(price, name, address, item, delivery_person, delivery_me
     tk.Label(payment_window, text="Card Number (16 digits):", **STYLE).pack(pady=5)
     card_number_entry = tk.Entry(payment_window, width=40)
     card_number_entry.pack()
+    
+    tk.Label(payment_window, text="Card Expiry (MM/YY):", **STYLE).pack(pady=5)
+    card_expiry_entry = tk.Entry(payment_window, width=40)
+    card_expiry_entry.pack()
