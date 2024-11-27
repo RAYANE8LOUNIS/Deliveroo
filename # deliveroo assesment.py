@@ -305,3 +305,11 @@ root.config(bg=STYLE["bg"])
 center_window(root, 800, 600)
 
 
+# Input fields for customer order
+
+#place the custumer name inside the window of main application 
+tk.Label(root, text="Customer Name:", **STYLE).pack(pady=5)
+name_entry = tk.Entry(root, width=50)
+name_entry.pack()
+
+
