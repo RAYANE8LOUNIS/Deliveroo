@@ -288,7 +288,7 @@ def open_rider_application_window(): #main name of the function
 
 #  this is to create a place for our termes and condition 
     terms_agree_var = tk.BooleanVar()
-    tk.Checkbutton(rider_window, text="I agree to the Terms and Conditions", variable=terms_agree_var, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=5)
+    tk.Checkbutton(rider_window, text="I agree to the Terms and Conditions", variable=terms_agree_var, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=10)
  
 # this is the application submison button 
     tk.Button(rider_window, text="Submit Application", command=submit_rider_application, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=20)
@@ -299,7 +299,7 @@ def open_rider_application_window(): #main name of the function
 root = tk.Tk()
 root.title("Deliveroo (Together we can make changes)")
 root.config(bg=STYLE["bg"])
-center_window(root, 800, 600)
+center_window(root, 850, 650)
 
 
 # Input fields for customer order
