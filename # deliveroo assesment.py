@@ -339,3 +339,7 @@ region_combobox.pack()
 #place the option of fast delivery inside the window of main application
 fast_delivery_var = tk.BooleanVar()
 tk.Checkbutton(root, text="Fast Delivery", variable=fast_delivery_var, bg=STYLE["bg"], fg=STYLE["fg"]).pack()
+
+# put the view order and add order button inside the main window application
+tk.Button(root, text="Add Order", command=add_order, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=10)
+tk.Button(root, text="View Orders", command=view_orders, bg=STYLE["bg"], fg=STYLE["fg"]).pack(pady=10)
