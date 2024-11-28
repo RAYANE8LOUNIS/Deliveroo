@@ -5,7 +5,12 @@ import json
 import os
 # from Pillow import image, ImageTk
 # File to store orders
+root=tk.Tk()
 ORDERS_FILE = "rayane.order"
+# Create a Canvas widget to hold the background image
+canvas = tk.Canvas(root, width=800, height=600)
+canvas.pack(fill="both", expand=True)  # Fill the window with the canvas
+
 
 def Take_orders():
     """Load orders from a file, and creating it if it doesn't exist for more help."""
@@ -348,5 +353,9 @@ tk.Button(root, text="Apply to be a rider ", command=open_rider_application_wind
 
 orders_text = tk.Text(root, width=70, height=15, wrap=tk.WORD)
 orders_text.pack()
+# Load the background image using PhotoImage (make sure the path is correct)
+background_image = tk.PhotoImage(file="delivroo.png")  # Replace with your image path
+canvas.create_image(0, 0, anchor="nw", image=background_image)
+
 
 root.mainloop()
