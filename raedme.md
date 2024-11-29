@@ -28,11 +28,21 @@ pip install -r requirements.txt
 Note: The project currently uses standard Python libraries (tkinter, datetime, json), so no additional dependencies are needed.
 
 
-## How to Play
-- Press the x key to do xxyy.
-- xxyy
+## How to run the app 
+Run the application by executing the following in your terminal:
 
-### Running the Game
+bash
+Copy code
+python main.py
+Features:
+
+Fill in the customer's details: name, address, item, and delivery preference, and click "Add Order" to create a new order.
+Confirm the payment for delivery orders through various means, for example, PayPal, Credit/Debit cards.
+Click "View Orders" to display all orders sorted by price in descending order.
+Click "Apply to be a Rider" to apply to be a delivery rider.
+
+
+### Running the app
 ```python
 python main.py
 ```
@@ -42,7 +52,7 @@ python main.py
 python UnitTest.py
 ```
 
-## Game Elements
+## app Elements
 - xxyy 
 - xxyy 
 
