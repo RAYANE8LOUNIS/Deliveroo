@@ -56,13 +56,37 @@ The project includes a testing module to validate various functionalities. To ru
 This command will execute all test cases defined in the UnitTest.py file.
 
 ## app Elements
-- xxyy 
-- xxyy 
+The core elements of my Deliveroo app are:
+
+Customer Order Form:
+
+A form that allows the user to enter customer information: name, address, and preferences for delivery.
+The user can select items to deliver.
+
+Order List Viewer:
+It lists all the saved orders.
+Orders automatically sort in descending order of price using a bubble sort algorithm.
+Payment Processing:
+
+Validates the means of payment, including:
+Credit/Debit Cards: The card number and date of expiration must be valid.
+PayPal: Offers a choice to handle the payment process securely.
+Rider Application Form:
+
+A special form for new riders to apply to the delivery service.
+Personal information includes name, contact information, and availability.
+Error Handling and Validation:
+
+Ensures validation of the user's input in the form fields; for example, no empty fields or incorrect details regarding payments.
+Show error messages upon invalid input.
+Data Management:
+
+Orders and rider applications will be stored in a JSON file: orders.json.
+Persisted data allows the application to reload saved orders when the application is restarted.y 
 
 ## Libraries Used
 The following libraries are used in this project:
-- Pygame
-- xxyy
+
 
 ## Project Structure
 - `ErrorHandling/`: Contains classes for handling various errors.
