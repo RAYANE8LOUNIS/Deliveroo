@@ -96,7 +96,9 @@ OS: For file handling, such as checking and creating orders.json if it doesn't e
 
 ## Project Structure
 - `ErrorHandling/`: Contains classes for handling various errors.
-xxyy
+main.py: The main script containing the application logic.
+orders.json: A file used to store all customer order data.
+ErrorHandling/:  Directory for custom error-handling classes or functions (if applicable).
 
 ## Unit Tests (optional)
 The project includes xxyy
