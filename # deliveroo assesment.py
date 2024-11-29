@@ -6,12 +6,8 @@ import os
 
 # from Pillow import image, ImageTk
 # File to store orders
-root=tk.Tk()
-ORDERS_FILE = "orders.json"
-# Create a Canvas widget to hold the background image
-canvas = tk.Canvas(root, width=800, height=600)
-canvas.pack(fill="both", expand=True)  # Fill the window with the canvas
 
+ORDERS_FILE = "orders.json"
 
 def Take_orders():
     """Load orders from a file, and creating it if it doesn't exist for more help."""
