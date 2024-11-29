@@ -3,6 +3,7 @@ from tkinter import messagebox, ttk
 from datetime import datetime
 import json
 import os
+from tkinter import PhotoImage
 
 # from Pillow import image, ImageTk
 # File to store orders
@@ -248,7 +249,7 @@ def open_rider_application_window(): #main name of the function
             messagebox.showerror("Error", "You must select a valid right to work option!")
             return
         
-        # the final message which will be display on the window if every thing is done 
+        # the final message which will be display on the window if every thing is done well
         messagebox.showinfo("Success", "Rider application submitted successfully! thank u for choosing Deliveroo! safe Ride ")
         rider_window.destroy() # destroy the rider application window to see the main window to make more orders 
 
@@ -354,9 +355,24 @@ tk.Button(root, text="Apply to be a rider ", command=open_rider_application_wind
 
 orders_text = tk.Text(root, width=70, height=15, wrap=tk.WORD)
 orders_text.pack()
-# Load the background image using PhotoImage (make sure the path is correct)
-background_image = tk.PhotoImage(file="delivroo.png")  # Replace with your image path
-canvas.create_image(0, 0, anchor="nw", image=background_image)
 
+# Create the main window
+window = tk.Tk()
+window.title("Delivery App")
+
+# Center the window
+center_window(window, width=800, height=600)
+
+# Create a Canvas widget to hold the background image
+canvas = tk.Canvas(window, width=800, height=600)
+canvas.pack()
+
+# Load the background image
+img = PhotoImage(file="delivroo.png")  # Ensure this file exists in the same directory or provide a full path
+canvas.create_image(0, 0, anchor="nw", image=img)
+
+# Add other widgets (optional)
+label = tk.Label(window, text="Welcome to Delivroo", font=("Arial", 24), fg="white", bg="black")
+label.place(x=300, y=50)
 
 root.mainloop()
