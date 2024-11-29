@@ -1,5 +1,5 @@
 # APP NAME
-
+Deliveroo
 # GitHub Repository
 The source code for this project is available on GitHub: https://github.com/RAYANE8LOUNIS/Deliveroo/tree/main 
 
@@ -31,8 +31,7 @@ Note: The project currently uses standard Python libraries (tkinter, datetime, j
 ## How to run the app 
 Run the application by executing the following in your terminal:
 
-bash
-Copy code
+
 python main.py
 Features:
 
@@ -51,6 +50,10 @@ python main.py
 ```python
 python UnitTest.py
 ```
+The project includes a testing module to validate various functionalities. To run unit tests, execute the following:
+
+"python UnitTest.py"  
+This command will execute all test cases defined in the UnitTest.py file.
 
 ## app Elements
 - xxyy 
