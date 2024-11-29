@@ -3,10 +3,11 @@ from tkinter import messagebox, ttk
 from datetime import datetime
 import json
 import os
+
 # from Pillow import image, ImageTk
 # File to store orders
 root=tk.Tk()
-ORDERS_FILE = "rayane.order"
+ORDERS_FILE = "orders.json"
 # Create a Canvas widget to hold the background image
 canvas = tk.Canvas(root, width=800, height=600)
 canvas.pack(fill="both", expand=True)  # Fill the window with the canvas

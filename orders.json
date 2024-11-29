@@ -10,5 +10,17 @@
         "region": "Africa",
         "fast_delivery": true,
         "price": 350
+    },
+    {
+        "name": "taha",
+        "address": "old kent road",
+        "item": "food",
+        "delivered": false,
+        "timestamp": "2024-11-29 11:42:20",
+        "delivery_person": "Borhan Sami",
+        "delivery_method": "Bike",
+        "region": "England",
+        "fast_delivery": false,
+        "price": 50
     }
 ]
