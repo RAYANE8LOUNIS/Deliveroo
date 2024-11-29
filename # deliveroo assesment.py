@@ -3,7 +3,6 @@ from tkinter import messagebox, ttk
 from datetime import datetime
 import json
 import os
-from tkinter import PhotoImage
 
 # from Pillow import image, ImageTk
 # File to store orders
@@ -355,24 +354,5 @@ tk.Button(root, text="Apply to be a rider ", command=open_rider_application_wind
 
 orders_text = tk.Text(root, width=70, height=15, wrap=tk.WORD)
 orders_text.pack()
-
-# Create the main window
-window = tk.Tk()
-window.title("Delivery App")
-
-# Center the window
-center_window(window, width=800, height=600)
-
-# Create a Canvas widget to hold the background image
-canvas = tk.Canvas(window, width=800, height=600)
-canvas.pack()
-
-# Load the background image
-img = PhotoImage(file="delivroo.png")  # Ensure this file exists in the same directory or provide a full path
-canvas.create_image(0, 0, anchor="nw", image=img)
-
-# Add other widgets (optional)
-label = tk.Label(window, text="Welcome to Delivroo", font=("Arial", 24), fg="white", bg="black")
-label.place(x=300, y=50)
 
 root.mainloop()
