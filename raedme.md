@@ -87,6 +87,12 @@ Persisted data allows the application to reload saved orders when the applicatio
 ## Libraries Used
 The following libraries are used in this project:
 
+Tkinter: For creating the GUI.
+Datetime: To manage timestamps and validate expiration dates for payments.
+JSON: For storing and retrieving order data.
+OS: For file handling, such as checking and creating orders.json if it doesn't exist.
+
+
 
 ## Project Structure
 - `ErrorHandling/`: Contains classes for handling various errors.
