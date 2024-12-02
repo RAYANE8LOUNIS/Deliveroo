@@ -12,6 +12,18 @@
         "price": 350
     },
     {
+        "name": "ffg",
+        "address": "tht",
+        "item": "hyh",
+        "delivered": false,
+        "timestamp": "2024-12-02 11:57:58",
+        "delivery_person": "Taha Rebbani",
+        "delivery_method": "Plane(british airways)",
+        "region": "Africa",
+        "fast_delivery": true,
+        "price": 350
+    },
+    {
         "name": "taha",
         "address": "old kent road",
         "item": "food",
@@ -22,5 +34,17 @@
         "region": "England",
         "fast_delivery": false,
         "price": 50
+    },
+    {
+        "name": "kaplan",
+        "address": "3 cathedral street",
+        "item": "laptops",
+        "delivered": false,
+        "timestamp": "2024-12-02 11:59:20",
+        "delivery_person": "Taha Rebbani",
+        "delivery_method": "Car",
+        "region": "England",
+        "fast_delivery": true,
+        "price": 100
     }
 ]

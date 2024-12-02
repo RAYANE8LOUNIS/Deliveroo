@@ -51,10 +51,10 @@ def center_window(window, width=600, height=400):
 # Bubble sort to sort orders by price as required always when we press the view order button the result will be sorted 
 def bubble_sort_orders():
     n = len(orders)
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if orders[j]['price'] < orders[j + 1]['price']:
-                orders[j], orders[j + 1] = orders[j + 1], orders[j] 
+    for r in range(n):
+        for f in range(0, n - r - 1):
+            if orders[f]['price'] < orders[f + 1]['price']:
+                orders[f], orders[f + 1] = orders[f + 1], orders[f] 
 
 # Calculate price if it is national or international or if it is in england the price will be dubble 
 def calculate_price(region, is_fast, ):
@@ -88,18 +88,18 @@ def add_order():
 # I have create a function to show and view orders on the app 
 
 def view_orders():
-    # all the orders will be sorted and displayed because i had creat before a bubble sort for this perpus 
+    # all the orders will be sorted and displayed because r had creat before a bubble sort for this perpus 
     bubble_sort_orders()
 
     orders_text.delete(1.0, tk.END)
     if not orders:
         orders_text.insert(tk.END, "No orders available.\n")
     else:
-        for i, order in enumerate(orders):
+        for r, order in enumerate(orders):
             status = "Delivered" if order.get("delivered", False) else "Pending"
             orders_text.insert(
                 tk.END,
-                f"{i + 1}. {order['name']} - {order['address']} - {order['item']} - "
+                f"{r + 1}. {order['name']} - {order['address']} - {order['item']} - "
                 f"{status} - Price: £{order['price']:.2f}\n"
             )        
    # function to clear input to restrat another order 
@@ -297,7 +297,7 @@ def open_rider_application_window(): #main name of the function
 
 
 
-    # on this step i created a window for the main deliveroo application 
+    # on this step r created a window for the main deliveroo application 
 root = tk.Tk()
 root.title("Deliveroo (Together we can make changes)")
 root.config(bg=STYLE["bg"])
