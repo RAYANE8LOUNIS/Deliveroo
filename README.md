@@ -64,13 +64,16 @@ A form that allows the user to enter customer information: name, address, and pr
 The user can select items to deliver.
 
 Order List Viewer:
+
 It lists all the saved orders.
 Orders automatically sort in descending order of price using a bubble sort algorithm.
 Payment Processing:
 
 Validates the means of payment, including:
+
 Credit/Debit Cards: The card number and date of expiration must be valid.
 PayPal: Offers a choice to handle the payment process securely.
+
 Rider Application Form:
 
 A special form for new riders to apply to the delivery service.
@@ -79,6 +82,7 @@ Error Handling and Validation:
 
 Ensures validation of the user's input in the form fields; for example, no empty fields or incorrect details regarding payments.
 Show error messages upon invalid input.
+
 Data Management:
 
 Orders and rider applications will be stored in a JSON file: orders.json.
