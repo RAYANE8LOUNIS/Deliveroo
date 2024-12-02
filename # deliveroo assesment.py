@@ -41,10 +41,10 @@ STYLE = {
 
 # create a window wich will be display on the screen
 def center_window(window, width=600, height=400):
-    screen_width = window.winfo_screenwidth()
-    screen_height = window.winfo_screenheight()
-    x = (screen_width - width) // 2
-    y = (screen_height - height) // 2
+    screen_width1 = window.winfo_screenwidth()
+    screen_height2 = window.winfo_screenheight()
+    x = (screen_width1 - width) // 2
+    y = (screen_height2 - height) // 2
     window.geometry(f"{width}x{height}+{x}+{y}")
     
 
